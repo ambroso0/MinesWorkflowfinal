@@ -4,7 +4,7 @@ tar -zxvf concessions.tar.gz
 
 VECT="concessions_agregees_2015_one.shp"
 vec_RAST=("Hansen_GFC2015_treecover2000_00N_010E.tif" "Hansen_GFC2015_treecover2000_00N_020E.tif" "Hansen_GFC2015_treecover2000_10N_020E.tif" "Hansen_GFC2015_treecover2000_10N_030E.tif" "Hansen_GFC2015_treecover2000_10S_020E.tif")
-# vec_OUT=("concessions1.tif" "concessions2.tif" "concessions3.tif" "concessions4.tif" "concessions5.tif"
+vec_OUT=("concessions1.tif" "concessions2.tif" "concessions3.tif" "concessions4.tif" "concessions5.tif")
 
 # Create a counter to dynamically create vect_OUT
 cnt=0
