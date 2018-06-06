@@ -21,7 +21,7 @@
       "hasDefault": false,
       "valueSchema": "url",
       "target": "concessions.tar.gz"
- }
+ },
   {
       "id": "DataObject_0h3a3f1",
       "inputType": "individual",
