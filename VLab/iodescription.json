@@ -1,0 +1,89 @@
+{
+  "inputs": [
+    {
+      "id": "DataObject_0h3a3ff",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "forest cover raster file",
+      "name": "forest raster",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "Hansen_GFC2015_treecover2000_00N_010E.tif"
+ }, 
+  {
+      "id": "DataObject_0h3a3f0",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "mining concessions vector file",
+      "name": "mining vector",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "concessions.tar.gz"
+ }
+  {
+      "id": "DataObject_0h3a3f1",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "forest cover raster file",
+      "name": "forest raster",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "Hansen_GFC2015_treecover2000_00N_020E.tif"
+ },
+  {
+      "id": "DataObject_0h3a3f2",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "forest cover raster file",
+      "name": "forest raster",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "Hansen_GFC2015_treecover2000_10N_020E.tif"
+ }, 
+  {
+      "id": "DataObject_0h3a3f3",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "forest cover raster file",
+      "name": "forest raster",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "Hansen_GFC2015_treecover2000_10N_030E.tif"
+ },
+  {
+      "id": "DataObject_0h3a3f4",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "forest cover raster file",
+      "name": "forest raster",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "Hansen_GFC2015_treecover2000_10S_020E.tif"
+ }   
+  ],
+  "outputs": [
+    {
+      "id": "DataObject_0n95v5p",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "surface each image file text",
+      "name": "detailed raster sum",
+      "valueSchema": "url",
+      "target": "detailed_rast_sum.txt"
+ },
+  {   "id": "DataObject_0n98v5p",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "raster sum file text",
+      "name": "raster sum",
+      "valueSchema": "url",
+      "target": "rast_sum.txt"   
+}
+ ]
+}

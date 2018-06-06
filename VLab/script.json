@@ -1,0 +1,9 @@
+{
+  "scripts": [
+    {
+      "repoPath": "ciclofor_bc.sh",
+      "targetPath": "ciclofor_bc.sh",
+      "pathType": "FILE"
+ }
+  ]
+}
