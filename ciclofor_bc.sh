@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo apt-get install bc
 tar -zxvf concessions.tar.gz
 
 VECT="concessions_agregees_2015_one.shp"
