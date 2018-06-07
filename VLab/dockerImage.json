@@ -1,6 +1,6 @@
 {
 
-  "image": "ambroso0/vlabtest2",
+  "image": "geodata/gdal:2.1.3",
   "resources": {
     "memory_mb": "50000",
     "cpu_units": ""
