@@ -17,7 +17,7 @@ for i in "${vec_RAST[@]}"
 do
     # increment the counter
     ((cnt+=1))
-    
+
     RAST=$i
     echo "* processing: $RAST"
 
@@ -28,7 +28,7 @@ do
     meta=`gdalinfo $RAST | grep 'Upper Right' | sed 's/Upper Right (//g' | sed 's/) (/,/g'`
     e=`echo ${meta}| awk -F ',' '{print $1}'`
     n=`echo ${meta}| awk -F ',' '{print $2}'`
-    
+
     # Get resolution (necessary to use the -tap option to guarantee proper overlay with RAST)
     meta=`gdalinfo $RAST | grep 'Pixel Size' | sed 's/Pixel Size = //g' | sed 's/(//g' | sed 's/)//g' | sed 's/ - /, /g'`
     rez=`echo ${meta}| awk -F ',' '{print $1}'`
@@ -36,11 +36,11 @@ do
     # RASTerize VECT as 1 overlaying perfectly RAST using information just collected
     rm -f concessions$cnt.tif # Remove the file if it already exists
     gdal_rasterize -te $w $s $e $n -tr $rez $rez -tap -burn 1 -init 0 -co COMPRESS=LZW $VECT concessions$cnt.tif
-    
+
     # Combine both rasters
     rm -f masked_$RAST # Remove the file if it already exists
     gdal_calc.py -A $RAST -B concessions$cnt.tif --co COMPRESS=LZW --outfile=masked_$RAST --calc="A*B"
-    
+
     # Calculate pixels sum, multiply by surface (km2) and take percentage into account
     stat=`gdalinfo -stats masked_$RAST | grep 'Size is ' | sed 's/Size is //g' |  sed 's/) (/,/g'`
     xpx=`echo ${stat}| awk -F ',' '{print $1}'`
@@ -53,7 +53,7 @@ do
 
     # Sum up the result of each loop
     sum_sum=`echo $sum_sum+$rast_sum | bc`
-    
+
 done
 
 # write the total sum in a file
