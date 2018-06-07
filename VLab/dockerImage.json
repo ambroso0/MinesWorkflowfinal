@@ -1,6 +1,6 @@
 {
 
-  "image": "geodata/gdal:2.1.3",
+  "image": "ambroso0/vlabtest2",
   "resources": {
     "memory_mb": "50000",
     "cpu_units": ""
@@ -11,7 +11,7 @@
       "-c"
  ],
     "command": [
-      "sh ciclofor_bc.sh"
+      "bash ciclofor_bc.sh"
  ]
   }
 }
